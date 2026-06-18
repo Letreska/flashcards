@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards - Futuro Sustentável</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <h1>🌱 Flashcards: Futuro Sustentável</h1>
+  <p>Aprenda sustentabilidade de forma simples e interativa</p>
+</header>
+
+<main>
+
+  <div class="card-container">
+
+    <div id="flashcard" class="flashcard">
+      <div class="front">
+        <h2 id="question">Pergunta</h2>
+        <p>Clique para ver a resposta</p>
+      </div>
+
+      <div class="back">
+        <h2 id="answer">Resposta</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="buttons">
+    <button id="flipBtn">Virar Card</button>
+    <button id="nextBtn">Próximo</button>
+  </div>
+
+</main>
+
+<footer>
+  <p>Projeto educativo • Sustentabilidade e Futuro do Agro</p>
+</footer>
+
+</body>
+</html>

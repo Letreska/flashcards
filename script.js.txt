@@ -1,0 +1,59 @@
+const flashcard = document.getElementById("flashcard");
+const question = document.getElementById("question");
+const answer = document.getElementById("answer");
+
+const flipBtn = document.getElementById("flipBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+const cards = [
+  {
+    q: "O que é sustentabilidade?",
+    a: "Uso dos recursos naturais sem comprometer as futuras gerações."
+  },
+  {
+    q: "O que é agricultura sustentável?",
+    a: "Produção agrícola que respeita o meio ambiente e reduz impactos."
+  },
+  {
+    q: "O que é energia renovável?",
+    a: "Energia proveniente de fontes naturais como sol, vento e água."
+  },
+  {
+    q: "O que é desmatamento?",
+    a: "Remoção de florestas que causa perda de biodiversidade."
+  },
+  {
+    q: "O que é economia circular?",
+    a: "Modelo que reutiliza recursos para evitar desperdício."
+  }
+];
+
+let index = 0;
+
+// carregar card
+function loadCard() {
+  question.textContent = cards[index].q;
+  answer.textContent = cards[index].a;
+  flashcard.classList.remove("flipped");
+}
+
+flipBtn.onclick = () => {
+  flashcard.classList.toggle("flipped");
+};
+
+nextBtn.onclick = () => {
+  index++;
+
+  if (index >= cards.length) {
+    index = 0;
+  }
+
+  loadCard();
+};
+
+// clicar no card também vira
+flashcard.onclick = () => {
+  flashcard.classList.toggle("flipped");
+};
+
+loadCard();
